@@ -1,5 +1,5 @@
 
-   body {
+body {
      font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -24,30 +24,6 @@ header nav ul {
     list-style: none;
 }
 
-.left-section {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-}
-
-.item {
-    padding: 5px; 
-    border: 1px; 
-    border-radius: 5px;
-}
-
-.menu-icon { 
-    
-    color: #000;
-    font-size: 20px;
-}
-   
-   * {
-    box-sizing: border-box;
-}
-
-
 #logo {
     text-decoration: none;
     font-size: 18px;
@@ -56,30 +32,64 @@ header nav ul {
 }
 
 
-
-.default-flex {
+.categories {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-
-.default-flex h2 {
-    flex-basis: 100%;
-    font-size: 20px
-    
-    ;
+.categories article {
+    flex:110;
 }
 
-.default-flex article img {
+footer {
+    display: grid;
+    text-align: center;
+    padding: 3px;
+    background-color: beige;
+    color: white;
+}
+
+form {
+    border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=password]{
     width: 100%;
+    padding:12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
-@media only screen and (min-width: 600px) {
-    .default-flex article 
-        flex-basis: 33%;
-        min-width: 300px;
+.imgvalgfriside {
+    text-align: center;
+    margin:24px 0 12px 0;
+}
+
+img.logo {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.valgfriside {
+    padding: 16px;
+}
+
+@media only screen and (min-width: 850px) {
+    #grid-container {
+        grid-template-areas: "header main footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
     }
+    
+    }
+
+.cateegories {
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
 
 
     footer {
@@ -90,25 +100,34 @@ header nav ul {
       }
 
 
+/* .default-flex article img { */
+    /* width: 100%; */
 
-  
-
-  
-
-
-
-
-@media only screen and (min-width: 991px) {
-
-     h3 { font-size: 50px; }
-
-    @media only screen and (min-width: 600px) {
-    .default-flex article {
-        flex-basis: 33%;
-        min-width: 300px;
-    }
-    /*header nav ul {
+   /* .left-section {
         display: flex;
-        gap: 0.5rem;
-        list-style: none;
-      }
+        align-items: center;
+        gap: 10px;
+    
+    }    
+
+
+
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
