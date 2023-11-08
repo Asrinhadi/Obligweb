@@ -10,23 +10,28 @@ header {
     justify-content: space-between;
     padding: 10px;
     background-color: beige;
-    align-items: baseline;
+    
 }
+
 
 .logo {
     flex: 1;
 }
 
+.mobil-ikon {
+    width: 40px;
+    height: 40px;
+}
 
 header nav ul {
-    display: flex;
+    display: none;
     gap: 0.5rem;
     list-style: none;
 }
 
 #logo {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     color: #000;
 }
@@ -86,6 +91,11 @@ img.logo {
     flex-direction: column;
 }
 
+.produkt-container {
+    display:grid;
+    grid-template-columns: 1fr;
+}
+
 
     footer {
         text-align: center;
@@ -109,6 +119,16 @@ img.logo {
 
 
 @media only screen and (min-width: 850px) {
+    .mobil-ikon {
+        display: none;
+    }
+
+    header nav ul {
+        display: flex;
+        gap: 0.5rem;
+        list-style: none;
+    }
+
     #grid-container {
         grid-template-areas: "header main footer";
         grid-template-columns: 1fr;
@@ -120,6 +140,9 @@ img.logo {
         flex-wrap: nowrap;
     }
     
+    .produkt-container {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 
